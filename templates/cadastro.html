@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+</head>
+
+<body>
+
+    <div class="cadastro">
+
+        <h1>Cadastro</h1>
+
+        <form method="POST" action="/cadastro">
+
+            <input type="text" name="nome" placeholder="Nome completo">
+
+            <input type="email" name="email" placeholder="seu@email.com">
+
+            <input type="password" name="senha1" placeholder="•••••••••">
+
+            <input type="password" name="senha2" placeholder="•••••••••">
+
+            <input type="submit" value="Cadastrar">
+
+        </form>
+
+        {% if erro %} 
+        {{ erro }} 
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
