@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container-right">
+        <div class="title">
+            <h1>EnTRAR</h1>
+            <p class="subtitle">Faça Login para continuar</p>
+        </div>
+
+        <form class="form" action="/login" method="POST">
+            <label class="form-label" for="email">EMAiL</label><br>
+            <input class="input-box" type="email" id="email" name="email" placeholder="seu@email.com" required><br>
+
+            <label class="form-label" for="senha">SeNHA</label><br>
+            <input class="input-box" type="password" id="senha" name="senha" placeholder="••••••••" required><br>
+
+            <a class="link" href="/esqueci-senha">Esqueceu a senha?</a><br>
+
+            <input class="submit-btn" type="submit" value="ENTrAR">
+        </form>
+
+        <p>Ou continue com</p>
+
+        <div>
+            <button type="submit">Apple</button>
+            <button type="submit">Google</button>
+        </div>
+
+        <div>
+            <p>Não possui conta?</p><a class="link" href="/cadastro">Cadastre-se</a>
+        </div>
+
+    </div>
+</body>
+
+</html>
