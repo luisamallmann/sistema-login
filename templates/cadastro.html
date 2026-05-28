@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-
 </head>
 
 <body>
+    <h1>Criar Conta</h1>
+    <p>Cadastre-se gratuitamente</p>
 
-    <div class="cadastro">
+    <form action="/cadastro" method="POST">
+        <label for="name">Nome completo</label><br>
+        <input type="text" id="name" name="name" placeholder="Seu Nome Completo" required><br>
 
-        <h1>Cadastro</h1>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required><br>
 
-        <form method="POST" action="/cadastro">
+        <label for="senha1">Senha</label><br>
+        <input type="password" id="senha1" name="senha1" placeholder="••••••••" required><br>
 
-            <input type="text" name="nome" placeholder="Nome completo">
+        <label for="senha2">Confirmar senha</label><br>
+        <input type="password" id="senha2" name="senha2" placeholder="••••••••" required><br>
 
-            <input type="email" name="email" placeholder="seu@email.com">
+        <input type="submit" value="Criar Conta">
+    </form>
 
-            <input type="password" name="senha1" placeholder="•••••••••">
+    <p>Ou continue com</p>
 
-            <input type="password" name="senha2" placeholder="•••••••••">
+    <button>Google</button>
+    <button>Apple</button>
 
-            <input type="submit" value="Cadastrar">
-
-        </form>
-
-        {% if erro %} 
-        {{ erro }} 
-        {% endif %}
-
-    </div>
+    <p>Já possui uma conta?</p><a href="/login">Entrar</a>
 
 </body>
 
