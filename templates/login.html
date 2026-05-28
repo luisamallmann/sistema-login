@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 
 <body>
@@ -27,15 +27,20 @@
             <input class="submit-btn" type="submit" value="ENTrAR">
         </form>
 
-        <p>Ou continue com</p>
-
         <div>
-            <button type="submit">Apple</button>
-            <button type="submit">Google</button>
-        </div>
-
-        <div>
-            <p>Não possui conta?</p><a class="link" href="/cadastro">Cadastre-se</a>
+            <div class="line">
+                <p class="small-title">Ou continue com</p>
+                <div class="horizontal-line"></div>
+            </div>
+            
+            <div class="auth-btn-container">
+                <button class="auth-btn" type="submit">GoOGLE</button>
+                <button class="auth-btn" type="submit">APpLE</button>
+            </div>
+            
+            <div class="line">
+                <p class="small-title">Não possui conta?</p><a class="link" href="/cadastro">Cadastre-se</a>
+            </div>
         </div>
 
     </div>
