@@ -5,35 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-    <h1>Criar Conta</h1>
-    <p>Cadastre-se gratuitamente</p>
+    <div class="container-right">
+        <div class="title">
+            <h1>CRiAR CoNTA</h1>
+            <p class="subtitle">Cadastre-se gratuitamente</p>
+        </div>
 
-    <form action="/cadastro" method="POST">
-        <label for="name">Nome completo</label><br>
-        <input type="text" id="name" name="name" placeholder="Seu Nome Completo" required><br>
+        <form class="form" action="/cadastro" method="POST">
+            <label class="form-label" for="nome">NoME</label>
+            <input class="input-box" type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
 
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" placeholder="seu@email.com" required><br>
+            <label class="form-label" for="email">EMAiL</label>
+            <input class="input-box" type="email" id="email" name="email" placeholder="seu@email.com" required>
 
-        <label for="senha1">Senha</label><br>
-        <input type="password" id="senha1" name="senha1" placeholder="••••••••" required><br>
+            <label class="form-label" for="senha1">SeNHA</label>
+            <div class="password-container">
+                <input class="input-box" type="password" id="senha1" name="senha1" placeholder="••••••••" required>
+                <i class="fa-solid fa-eye toggle-password" id="togglePassword"></i>
+            </div>
 
-        <label for="senha2">Confirmar senha</label><br>
-        <input type="password" id="senha2" name="senha2" placeholder="••••••••" required><br>
+            <label class="form-label" for="senha2">CoNFIRME A SeNHA</label>
+            <div class="password-container">
+                <input class="input-box" type="password" id="senha2" name="senha2" placeholder="••••••••" required>
+                <i class="fa-solid fa-eye toggle-password" id="togglePassword"></i>
+            </div>
 
-        <input type="submit" value="Criar Conta">
-    </form>
+            <input class="submit-btn" type="submit" value="CRiAR CoNTA">
+        </form>
 
-    <p>Ou continue com</p>
+        <div>
+            <div class="line">
+                <p class="small-title">Ou continue com</p>
+                <div class="horizontal-line"></div>
+            </div>
 
-    <button>Google</button>
-    <button>Apple</button>
+            <div class="auth-btn-container">
+                <button class="auth-btn" type="submit">GoOGLE</button>
+                <button class="auth-btn" type="submit">APpLE</button>
+            </div>
 
-    <p>Já possui uma conta?</p><a href="/login">Entrar</a>
+            <div class="line">
+                <p class="small-title">Já possui conta?</p><a class="link" href="/login">Entre</a>
+            </div>
+        </div>
+    </div>
 
+    <div class="container-left">
+        <div class="title">
+            <h1>BeM-VINDo dE VOLtA</h1>
+            <p class="subtitle2">Faça login para continuar</p>
+        </div>
+        <div class="small-container">
+            <img class="img" src="{{ url_for('static', filename='img/cadeira.png') }}">
+            <div class="line">
+                <p class="link">Inspirado em ✶ </p>
+                <p class="small-title2">DeBÍ TiRAR MáS FOToS</p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
