@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -20,7 +21,11 @@
             <input class="input-box" type="email" id="email" name="email" placeholder="seu@email.com" required><br>
 
             <label class="form-label" for="senha">SeNHA</label><br>
-            <input class="input-box" type="password" id="senha" name="senha" placeholder="••••••••" required><br>
+
+            <div class="password-container">
+                <input class="input-box" type="password" id="senha" name="senha" placeholder="••••••••" required>
+                <i class="fa-solid fa-eye toggle-password" id="togglePassword"></i>
+            </div><br>
 
             <a class="link" href="/esqueci-senha">Esqueceu a senha?</a><br>
 
