@@ -19,14 +19,28 @@
 }
 
 body {
-    background: #F5EBDD;
+    background: var(--branco-sujo);
     display: flex;
     align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.container-left {
+    display: flex;
+    width: 900px;
+    padding: 150px 63px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 107px;
+    flex-shrink: 0;
+    background-color: var(--azul-escuro);
 }
 
 .container-right {
     display: flex;
-    width: 945px;
+    width: 700px;
     padding: 40px 78px;
     flex-direction: column;
     align-items: flex-start;
@@ -54,11 +68,25 @@ h1 {
     line-height: normal;
 }
 
+.subtitle2 {
+    color: var(--azul-pr);
+    text-align: left;
+    font-family: 'Brs10';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 .form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
+}
+
+.password-container{
+    gap:10px;
 }
 
 .form-label {
@@ -82,11 +110,11 @@ h1 {
     padding: 10px;
 }
 
-.input-box::placeholder{
+.input-box::placeholder {
     color: var(--azul-pr);
 }
 
-.link{
+.link {
     color: var(--azul-mar);
     text-align: left;
     font-family: 'Brs10';
@@ -94,7 +122,7 @@ h1 {
     text-decoration: none;
 }
 
-.submit-btn{
+.submit-btn {
     background: var(--vermelho-pr);
     color: var(--branco-sujo);
     font-family: 'DtMF';
@@ -104,19 +132,24 @@ h1 {
     border: 0;
 }
 
-.line{
+.submit-btn:hover{
+    background-color: #a31521;
+    cursor: pointer;
+}
+
+.line {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.horizontal-line{
+.horizontal-line {
     height: 2px;
     width: 354px;
     background-color: var(--vermelho-pr);
 }
 
-.auth-btn{
+.auth-btn {
     background: var(--azul-mar);
     color: var(--branco-sujo);
     font-family: 'DtMF';
@@ -130,19 +163,40 @@ h1 {
     border: 0;
 }
 
-.auth-btn-container{
+.auth-btn:hover{
+    background-color: #33749c;
+    cursor: pointer;
+}
+
+.auth-btn-container {
     display: flex;
     align-items: center;
     gap: 60px;
 }
 
-.redirect{
+.redirect {
     display: flex;
 }
 
-.small-title{
+.small-title {
     color: var(--vermelho-pr);
     text-align: left;
     font-family: 'Brs10';
     font-size: 24px;
+}
+
+.small-title2 {
+    color: var(--azul-mar);
+    text-align: left;
+    font-family: 'DtMF';
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.img{
+    width: 159px;
+}
+
+.small-container{
+    gap:20px;
 }
